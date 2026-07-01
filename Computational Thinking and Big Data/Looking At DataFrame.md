@@ -5,3 +5,5 @@ library(tidyverse)
 mpg
 
 ## output will be 
+<img width="657" height="278" alt="image" src="https://github.com/user-attachments/assets/691991cd-d23a-40bb-bfdc-0f13bb6b7faa" />
+
