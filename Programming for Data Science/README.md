@@ -4,9 +4,9 @@ The first thing you should do before you start looking for data to use -- and be
 
 Your design should include:
 
-a statement of what your data is
-the analysis you want to perform, and
-how the data will be displayed.
+* a statement of what your data is
+* the analysis you want to perform, and
+* how the data will be displayed.
 
 Additionally, you should decompose the problem into functions, writing the function signature for each one you will need.
 
