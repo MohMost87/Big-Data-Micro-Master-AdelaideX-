@@ -1,5 +1,6 @@
 # this is Major Assignment that include all the 4 requirements 
-#The first thing you should do before you start looking for data to use -- and before you start coding -- is to design your program. You should have done this several times before now, and it’s no different in your major assignment. 
+## Assignment instructions - Part 1: Design
+# The first thing you should do before you start looking for data to use -- and before you start coding -- is to design your program. You should have done this several times before now, and it’s no different in your major assignment. 
 
 Your design should include:
 
