@@ -1,1 +1,244 @@
 
+//==========================================
+//Part 1
+//Program Design
+//1- Data Statement 
+// dataset consist of historical monthly Weather  records .
+// Data are  1- String Month (Name of the Month)
+//           2- Float Max Temp (Max recorded Temp in °C)
+//           3- Float Min Temp (Min Recorded Temp in °C)
+//           4- Float rainfall (Total rainfall volume in mm)
+
+// 2- Analysis Plan
+// calcualte the average of max and min temp
+// calcualte standard deviation of rainfall to undersand climate variability
+// filter out "dry months" through the year.
+
+//3- Display Strategy
+// 1- table to show data in 4 columns Month|Max Temp|Min Temp|Rainfall volume
+// 2- table to show clculation on rainfall volume show average|Max | Min | Standard dev |Data Range
+// 3- Bar graph show trend over the year 
+
+
+// ==========================================
+// Part 2 Data 
+// ==========================================
+int numRecords = 12; // this to be used in bar graph to determine points to draw after run sketch
+String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}; // Months stored in array and of type String
+
+float[] maxTemps  = {30.5, 31.2, 29.0, 25.4, 21.1, 18.2, 17.5, 19.0, 22.3, 25.1, 27.4, 29.3}; // Max Temp values in Float data type 
+float[] minTemps  = {19.2, 19.5, 17.6, 14.1, 10.5,  8.1,  7.2,  8.3, 10.9, 13.5, 15.8, 17.9}; // Min Temp Values in float data type 
+float[] rainfall  = {102.3, 85.0, 120.4, 63.1, 45.2, 23.0, 15.5, 33.1, 52.0, 70.4, 88.9, 95.2}; // rainfall volume in float data type
+
+// Statistical Variables that plan to calcualte 
+float avgRain, maxRain, minRain, rainStdDev, rainRange;
+
+void setup() {
+  size(1000, 650); 
+  surface.setResizable(true); // this to make graph resizable 
+  
+  // Assign functions to variables for easy calling them
+  avgRain    = calculateAverage(rainfall);
+  maxRain    = findMax(rainfall);
+  minRain    = findMin(rainfall);
+  rainStdDev = calculateStdDev(rainfall);
+  rainRange  = maxRain - minRain;
+}
+// canvas drawing code 
+void draw() {
+  background(240, 244, 248); // background color
+  
+  // Calculate dynamic boundaries to ensure total layout responsiveness
+  float pad = width * 0.03;// for padding 
+  
+  float leftColWidth = width * 0.40; // left column width
+  
+  float rightColWidth = width * 0.51;// right colum width
+  
+  float contentHeight = height - (pad * 2); // height 
+  
+  // left column table
+  drawRawDataTable(pad, pad, leftColWidth, contentHeight * 0.55);
+  drawStatsTable(pad, pad + (contentHeight * 0.60), leftColWidth, contentHeight * 0.40);
+  
+  // Bar Chart + Trendline
+  drawBarChart(pad + leftColWidth + pad, pad, rightColWidth, contentHeight);
+}
+
+// ==========================================
+//  Part 3 Analysis functions (Methods signatures)
+// ==========================================
+
+float calculateAverage(float[] data) {
+  float sum = 0;
+  for (float val : data) sum += val;
+  return sum / data.length;
+}// to clcualte average (Meean) of dataset points
+
+float findMax(float[] data) {
+  float maxV = data[0];
+  for (float val : data) if (val > maxV) maxV = val;
+  return maxV;
+}// calculate Max of values 
+
+float findMin(float[] data) {
+  float minV = data[0];
+  for (float val : data) if (val < minV) minV = minV;  // simple clamp fallback
+  for (float val : data) if (val < minV) minV = val;
+  return minV;
+}// calcualte Min Of values
+
+float calculateStdDev(float[] data) {
+  float mean = calculateAverage(data);
+  float sumSqDiff = 0;
+  for (float val : data) sumSqDiff += pow(val - mean, 2);
+  return sqrt(sumSqDiff / data.length);
+}// calcuate standard deviation
+
+// ==========================================
+// Part 4 VISUALIZATION
+// ==========================================
+
+void drawRawDataTable(float x, float y, float w, float h) {
+  fill(255);
+  stroke(200);
+  rect(x, y, w, h, 6);// create table to show the data pwe month and other temp min and max
+  
+  // Title 
+  fill(52, 73, 94);
+  textSize(14);
+  textAlign(LEFT, CENTER);
+  text(" Historical Weather Data", x + 5, y + 20);
+  
+  // Table Header
+  float rowH = (h - 35) / 13;
+  fill(236, 240, 241);
+  noStroke();
+  rect(x + 5, y + 35, w - 10, rowH);
+  
+  fill(44, 62, 80);
+  textSize(11);
+  text("Month", x + 15, y + 35 + rowH/2);
+  text("Max Temp (°C)", x + 90, y + 35 + rowH/2);
+  text("Min Temp (°C)", x + 190, y + 35 + rowH/2);
+  text("Rainfall (mm)", x + 290, y + 35 + rowH/2);
+  
+  // Rows
+  stroke(235);
+  for (int i = 0; i < numRecords; i++) {
+    float rowY = y + 35 + (i + 1) * rowH;
+    if (i % 2 == 0) {
+      fill(249, 250, 252);
+      noStroke();
+      rect(x + 5, rowY, w - 10, rowH);
+    }
+    fill(127, 140, 141);
+    text(months[i], x + 15, rowY + rowH/2);
+    text(nf(maxTemps[i], 1, 1), x + 90, rowY + rowH/2);
+    text(nf(minTemps[i], 1, 1), x + 190, rowY + rowH/2);
+    text(nf(rainfall[i], 1, 1), x + 290, rowY + rowH/2);
+    stroke(235);
+    line(x + 5, rowY + rowH, x + w - 5, rowY + rowH);
+  }
+}
+// table for calculations 
+void drawStatsTable(float x, float y, float w, float h) {
+  fill(255);
+  stroke(200);
+  rect(x, y, w, h, 6);
+  
+  fill(52, 73, 94);
+  textSize(14);
+  textAlign(LEFT, CENTER);
+  text("Rainfall Statistics Summary", x + 5, y + 20);
+  
+  String[] metricNames = {"Average (Mean)", "Maximum", "Minimum", "Standard Deviation (σ)", "Data Range"};
+  float[] metricVals  = {avgRain, maxRain, minRain, rainStdDev, rainRange};
+  
+  float rowH = (h - 35) / 5;
+  for (int i = 0; i < 5; i++) {
+    float rowY = y + 35 + (i * rowH);
+    if (i % 2 == 1) {
+      fill(244, 247, 249);
+      noStroke();
+      rect(x + 5, rowY, w - 10, rowH);
+    }
+    fill(44, 62, 80);
+    textSize(11);
+    text(metricNames[i], x + 20, rowY + rowH/2);
+    fill(41, 128, 185);
+    textSize(12);
+    text(nf(metricVals[i], 1, 2) + " mm", x + w - 110, rowY + rowH/2);
+  }
+}
+
+void drawBarChart(float x, float y, float w, float h) {
+  fill(255);
+  stroke(200);
+  rect(x, y, w, h, 6);
+  
+  fill(44, 62, 80);
+  textSize(15);
+  textAlign(LEFT, CENTER);
+  text("Monthly Bar Graph Trend ", x + 25, y + 25);
+  
+  // Bounds of inner chart area
+  float chartX = x + 45;
+  float chartY = y + 60;
+  float chartW = w - 70;
+  float chartH = h - 110;
+  
+  float maxVal = maxRain * 1.15; // Top padding boundary
+  float spacing = chartW / numRecords;
+  
+  // Gridlines and horizontal scale labels
+  stroke(240);
+  fill(149, 165, 166);
+  textSize(10);
+  for (int i = 0; i <= 4; i++) {
+    float gridY = chartY + chartH - (chartH / 4) * i;
+    line(chartX, gridY, chartX + chartW, gridY);
+    text(int(maxVal / 4 * i), chartX - 30, gridY);
+  }
+  
+  // Render Bars & Labels
+  for (int i = 0; i < numRecords; i++) {
+    float barW = spacing * 0.65;
+    float barX = chartX + (i * spacing) + (spacing - barW)/2;
+    float barH = map(rainfall[i], 0, maxVal, 0, chartH);
+    
+    // Aesthetic check: Highlight values greater than the structural mean average
+    if (rainfall[i] >= avgRain) {
+      fill(52, 152, 219); // Bright Blue for above average
+    } else {
+      fill(127, 140, 141, 180); // Slate Gray for below average
+    }
+    
+    noStroke();
+    rect(barX, chartY + chartH - barH, barW, barH, 4, 4, 0, 0);
+    
+    // Data Value Label on top of each individual bar
+    fill(44, 62, 80);
+    textAlign(CENTER, BOTTOM);
+    textSize(10);
+    text(nf(rainfall[i], 1, 0), barX + barW/2, chartY + chartH - barH - 4);
+    
+    // Base Axis 
+    textAlign(CENTER, TOP);
+    text(months[i], barX + barW/2, chartY + chartH + 8);
+  }
+  
+  //  Trend  Line
+  stroke(231, 76, 60); // Red line representing data patterns over time
+  strokeWeight(2.5);
+  noFill();
+  beginShape();
+  for (int i = 0; i < numRecords; i++) {
+    float barW = spacing * 0.65;
+    float pointX = chartX + (i * spacing) + (spacing - barW)/2 + barW/2;
+    float pointY = chartY + chartH - map(rainfall[i], 0, maxVal, 0, chartH);
+    vertex(pointX, pointY);
+  }
+  endShape();
+  strokeWeight(1); 
+}
