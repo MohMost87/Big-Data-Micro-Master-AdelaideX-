@@ -1,5 +1,5 @@
-## Installing Tidyverse dataframe
-install.packages("tidyverse")
+## Installing Tidyverse dataframe(Install.packages function)
+install.packages("tidyverse")     
 ## Load the mpg dataframe contained in the tidyverse package:
 library(tidyverse) <br>
 mpg
