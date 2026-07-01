@@ -59,3 +59,13 @@ You should find a unique method of displaying your data. It should be meaningful
 If you are stuck trying to visualise your data, then the Information is Beautiful website may provide you with some ideas.
 
 Some requirements of your visualisation are that the data visualisation can scale and still be visualised correctly. This means if your data values change, the visualisation should still be fully displayed on the canvas, and no data should overlap, or be missing. Additionally, the canvas should be able to change size without changing the visualisation. 
+
+
+
+
+<img width="965" height="625" alt="image" src="https://github.com/user-attachments/assets/1ac21e8c-0688-41f6-afaf-4e3d0d5cddd0" />
+
+
+
+
+
