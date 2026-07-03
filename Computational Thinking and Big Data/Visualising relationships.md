@@ -15,6 +15,13 @@ To visualize the relationship between two continuous variables, we use a basic s
 ggplot(mpg) + 
   geom_point(mapping = aes(x = displ, y = cty))
 
+## Key Concept: ggplot() initializes the plot with the dataset, and geom_point() adds the layer of points (scatter plot) using the aesthetic mapping aes().
+<img width="1078" height="574" alt="image" src="https://github.com/user-attachments/assets/b6a522e8-a2e4-49dc-b511-ef7821fab747" />
+
+
+
+
+
 
 
 
