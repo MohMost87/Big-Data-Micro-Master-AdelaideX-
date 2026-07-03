@@ -57,3 +57,61 @@ Part 2 - Count the frequency of each word used, making sure to remove stop words
 Part 3 - Answer Questions 1-5.
 
 
+# -------------------------------------------------------------------------
+# Activity 4: Visualising common words and similarities between texts
+# -------------------------------------------------------------------------
+
+# Load required packages (install first if needed via install.packages())
+library(tidyverse)
+library(tidytext)
+
+# --- Part 1: Load the Dataset ---
+# Ensure "carroll_books.csv" is in your working directory (check with getwd())
+carroll_data <- as_tibble(read.csv(
+  file = "carroll_books.csv", 
+  as.is = c("text"), 
+  encoding = "UTF-8"
+))
+
+# Quick inspection of the columns (typically expects 'text' and 'title' or 'gutenberg_id')
+print("Initial data structure:")
+glimpse(carroll_data)
+
+
+# --- Part 2: Tokenization, Stop Word Removal, and Word Counting ---
+
+# 1. Break the text down into individual words (tokenization)
+# 2. Filter out standard English stop words (like 'the', 'and', 'of')
+# 3. Group by book and count frequencies
+word_counts <- carroll_data %>%
+  unnest_tokens(output = word, input = text) %>% 
+  anti_join(stop_words, by = "word") %>%       
+  filter(str_detect(word, "^[a-z]+$")) %>%     # Remove numbers, punctuation-only tokens
+  count(title, word, sort = TRUE)              # Assumes column name is 'title' or 'book'
+
+print("Top frequent words after removing stop words:")
+print(head(word_counts, 10))
+
+
+# --- Data Visualization (ggplot2) ---
+
+# Generate a bar chart comparing the top 10 most common words in both books
+top_words_plot <- word_counts %>%
+  group_by(title) %>%
+  slice_max(n, n = 10) %>%
+  ungroup() %>%
+  mutate(word = reorder_within(word, n, title)) # Prevents mingling across facets
+
+ggplot(top_words_plot, aes(x = n, y = word, fill = title)) +
+  geom_col(show.legend = FALSE) +
+  scale_y_reordered() +                        # Pairs with reorder_within
+  facet_wrap(~title, scales = "free_y") +
+  labs(
+    title = "Top 10 Most Common Words in Lewis Carroll's Works",
+    subtitle = "Stop words removed",
+    x = "Word Count (Frequency)",
+    y = NULL
+  ) +
+  theme_minimal()
+
+
