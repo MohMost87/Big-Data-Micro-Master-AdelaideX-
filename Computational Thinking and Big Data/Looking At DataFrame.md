@@ -27,5 +27,12 @@ mytribble<br>
 <img width="204" height="133" alt="image" src="https://github.com/user-attachments/assets/53d730da-bf91-493d-a25d-5a2baf5f13ce" />
 
 ### Getting variables from a dataframe
+## look at only part of a dataframe
+mpg<b>$</b>model  <br>
+<img width="675" height="339" alt="image" src="https://github.com/user-attachments/assets/aad3dab7-da26-4a66-a5cb-464bda44897d" />
+
+
+
+
 
 
