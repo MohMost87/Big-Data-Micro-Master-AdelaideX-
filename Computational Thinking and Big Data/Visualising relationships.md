@@ -62,19 +62,19 @@ Part 3 - Answer Questions 1-5.
 # -------------------------------------------------------------------------
 
 # Load required packages (install first if needed via install.packages())
-library(tidyverse)
+library(tidyverse)<br>
 library(tidytext)
 
 # --- Part 1: Load the Dataset ---
-# Ensure "carroll_books.csv" is in your working directory (check with getwd())
-carroll_data <- as_tibble(read.csv(
-  file = "carroll_books.csv", 
-  as.is = c("text"), 
-  encoding = "UTF-8"
+##  Ensure "carroll_books.csv" is in your working directory (check with getwd())
+carroll_data <- as_tibble(read.csv(<br>
+  file = "carroll_books.csv", <br>
+  as.is = c("text"), <br>
+  encoding = "UTF-8"<br>
 ))
 
-# Quick inspection of the columns (typically expects 'text' and 'title' or 'gutenberg_id')
-print("Initial data structure:")
+Quick inspection of the columns (typically expects 'text' and 'title' or 'gutenberg_id')
+print("Initial data structure:")<br>
 glimpse(carroll_data)
 
 
@@ -87,7 +87,7 @@ word_counts <- carroll_data %>%
   unnest_tokens(output = word, input = text) %>% 
   anti_join(stop_words, by = "word") %>%       
   filter(str_detect(word, "^[a-z]+$")) %>%     # Remove numbers, punctuation-only tokens
-  count(title, word, sort = TRUE)              # Assumes column name is 'title' or 'book'
+  count(gutenberg_id, word, sort = TRUE) 
 
 print("Top frequent words after removing stop words:")
 print(head(word_counts, 10))
@@ -96,11 +96,12 @@ print(head(word_counts, 10))
 # --- Data Visualization (ggplot2) ---
 
 # Generate a bar chart comparing the top 10 most common words in both books
+
 top_words_plot <- word_counts %>%
-  group_by(title) %>%
+  group_by(gutenberg_id) %>%
   slice_max(n, n = 10) %>%
   ungroup() %>%
-  mutate(word = reorder_within(word, n, title)) # Prevents mingling across facets
+  mutate(word = reorder_within(word, n, gutenberg_id)) 
 
 ggplot(top_words_plot, aes(x = n, y = word, fill = title)) +
   geom_col(show.legend = FALSE) +
@@ -113,5 +114,15 @@ ggplot(top_words_plot, aes(x = n, y = word, fill = title)) +
     y = NULL
   ) +
   theme_minimal()
+
+
+  ## Top count 
+
+  <img width="557" height="276" alt="image" src="https://github.com/user-attachments/assets/d9c5a392-cfef-413b-beb4-1331506fca7d" />
+
+
+  <img width="1064" height="566" alt="image" src="https://github.com/user-attachments/assets/d11b582c-fd78-4e3b-a221-544de05d38c5" />
+
+
 
 
