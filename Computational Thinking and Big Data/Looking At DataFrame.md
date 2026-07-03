@@ -51,6 +51,13 @@ mpg[194:198,1:4]<br>
 
 =========================================================================================================================================
 ## Subjects and Variables Quantitative (discrete, continuous) vs Categorical (ordinal, nominal).
+## Tables and barcharts in R
+## create table
+table(mpg$manufacturer)
+
+<img width="674" height="131" alt="image" src="https://github.com/user-attachments/assets/2268feab-07f2-414f-b2e1-c4ad28ffc70c" />
+
+
 
 
 
