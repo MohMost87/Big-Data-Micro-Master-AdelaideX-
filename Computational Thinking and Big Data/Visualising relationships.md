@@ -28,5 +28,8 @@ ggplot is built upon layers, making it an incredibly powerful tool for creating 
  ggplot(mpg) + <br>
   geom_point(mapping = aes(x  = displ, y = cty)) + <br>
   geom_smooth(mapping = aes(x  = displ, y = cty)) <br>
-  
+
+
+  <img width="1074" height="567" alt="image" src="https://github.com/user-attachments/assets/609b6be2-3db0-45e0-b5f9-31215c689eb9" />
+
 
