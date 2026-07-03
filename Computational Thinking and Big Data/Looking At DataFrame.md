@@ -72,8 +72,8 @@ Make a canvas which will visualise data from the mpg dataframe ggplot(mpg)<br>
 Map the single aesthetic manufacturer to the x-axis of this canvas aes(manufacturer), and,<br>
 Add a barchart layer showing this to the plot + geom_bar().<br>
 ======================================================================================== <br> 
-## Reading Jane Austen novels into R
-## install some packages will be used to manipulate 
+## Reading Jane Austen novels into R <br>
+## install some packages will be used to manipulate <br>
 library(tidyverse)<br>
 library(tidytext)<br>
 library(janeaustenr)<br>
@@ -88,6 +88,23 @@ original_books <- austen_books() %>%<br>
   ungroup()<br>
 ## output
 <img width="614" height="278" alt="image" src="https://github.com/user-attachments/assets/f7e2e769-7d93-4b47-99af-df36c8703e62" />
+=============  <br>
+## Type the commands into R and then have a look at the data frame:
+
+What are the subjects?<br>
+What are the variables? <br>
+What type of variables are they? <br>
+We are now going to change the form of the dataframe using the function from the tidytext package called the unnest_tokens() function. <br>
+
+tidy_books <- original_books %>% <br>
+  unnest_tokens(word, text) <br>
+
+  <img width="472" height="260" alt="image" src="https://github.com/user-attachments/assets/e344efcb-9bda-48fc-b409-d7354b3524f6" />
+
+  
+
+
+
 
 
 
