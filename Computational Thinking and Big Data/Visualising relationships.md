@@ -19,7 +19,7 @@ ggplot(mpg) +
 <img width="1078" height="574" alt="image" src="https://github.com/user-attachments/assets/b6a522e8-a2e4-49dc-b511-ef7821fab747" />
 
 
-
+2. Adding Color Aesthetics
 
 
 
