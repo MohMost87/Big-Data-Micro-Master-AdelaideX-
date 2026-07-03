@@ -61,7 +61,7 @@ table(mpg$manufacturer)
 prop.table(table(mpg$manufacturer))
 
 <img width="654" height="133" alt="image" src="https://github.com/user-attachments/assets/b149a254-44b2-4a0c-8dbd-93d87f25019d" /><br>
-========================================================================================================================================<br>
+======================================================================================================================================== <br>
 ggplot package  visulaization
 ggplot(mpg,aes(manufacturer)) +<br>
 geom_bar() +<br>
@@ -71,14 +71,14 @@ theme(text = element_text(size = 30), axis.text.x = element_text(angle = 90))<br
 Make a canvas which will visualise data from the mpg dataframe ggplot(mpg)<br>
 Map the single aesthetic manufacturer to the x-axis of this canvas aes(manufacturer), and,<br>
 Add a barchart layer showing this to the plot + geom_bar().<br>
-========================================================================================  
+======================================================================================== <br> 
 ## Reading Jane Austen novels into R
 ## install some packages will be used to manipulate 
 library(tidyverse)<br>
 library(tidytext)<br>
 library(janeaustenr)<br>
 library(stringr)<br>
-========
+======== <br>
 after than will create new variable called originalbooks
 original_books <- austen_books() %>%<br>
   group_by(book) %>%<br>
