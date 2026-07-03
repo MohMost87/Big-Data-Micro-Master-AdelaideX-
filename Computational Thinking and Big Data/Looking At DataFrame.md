@@ -71,14 +71,14 @@ theme(text = element_text(size = 30), axis.text.x = element_text(angle = 90))<br
 Make a canvas which will visualise data from the mpg dataframe ggplot(mpg)<br>
 Map the single aesthetic manufacturer to the x-axis of this canvas aes(manufacturer), and,<br>
 Add a barchart layer showing this to the plot + geom_bar().<br>
-========================================================================================
+========================================================================================  
 ## Reading Jane Austen novels into R
 ## install some packages will be used to manipulate 
 library(tidyverse)<br>
 library(tidytext)<br>
 library(janeaustenr)<br>
 library(stringr)<br>
-
+========
 after than will create new variable called originalbooks
 original_books <- austen_books() %>%<br>
   group_by(book) %>%<br>
@@ -86,7 +86,7 @@ original_books <- austen_books() %>%<br>
          chapter = cumsum(str_detect(text, regex("^chapter [\\divxlc]",<br>
                                                  ignore_case = TRUE)))) %>%<br>
   ungroup()<br>
-
+## output
 <img width="614" height="278" alt="image" src="https://github.com/user-attachments/assets/f7e2e769-7d93-4b47-99af-df36c8703e62" />
 
 
