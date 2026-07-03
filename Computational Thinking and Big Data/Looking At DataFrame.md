@@ -41,6 +41,15 @@ mpg[194,]<br>
 
 <img width="677" height="101" alt="image" src="https://github.com/user-attachments/assets/1c55bf38-42ea-4c41-aa2a-a29e4c7efcbe" />
 
+##  look at a range of rows and columns 
+dataset[Row range,Column Range]<br>
+mpg[194:198,1:4]<br>
+
+<img width="344" height="151" alt="image" src="https://github.com/user-attachments/assets/e534b37b-8be3-42a4-960c-c89cd36351a0" />
+
+
+
+
 
 
 
