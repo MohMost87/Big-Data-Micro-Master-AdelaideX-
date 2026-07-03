@@ -40,6 +40,13 @@ ggplot is built upon layers, making it an incredibly powerful tool for creating 
 
 <img width="1073" height="574" alt="image" src="https://github.com/user-attachments/assets/31bb3e4f-0224-45b0-a40e-b157b6e0d87b" />
 
-  
+## Split each type of drive into its own plot using a facet_wrap
+ ggplot(mpg, mapping = aes(x = displ, y = cty)) + <br>
+  geom_point() + <br>
+  geom_smooth() + <br>
+  facet_wrap( ~ drv) <br>
+
+  <img width="1076" height="569" alt="image" src="https://github.com/user-attachments/assets/32d86803-1c48-4f4d-9574-5a07775d2281" />
+
 
 
