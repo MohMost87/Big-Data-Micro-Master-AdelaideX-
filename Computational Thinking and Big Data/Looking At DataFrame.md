@@ -50,7 +50,7 @@ mpg[194:198,1:4]<br>
 
 
 =========================================================================================================================================
-## <color="red"> Subjects and Variables
+## Subjects and Variables Quantitative (discrete, continuous) vs Categorical (ordinal, nominal).
 
 
 
