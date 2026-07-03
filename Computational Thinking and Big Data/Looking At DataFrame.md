@@ -35,6 +35,11 @@ mpg<b>$</b>model  <br>
 unique(mpg$model)<br>
 <img width="661" height="230" alt="image" src="https://github.com/user-attachments/assets/6cdf71ae-702b-412a-9866-5c5813ef817e" />
 
+38 different types of cars in the dataset.<br>
+## if we need particular entry in dataset
+mpg[194,]<br>
+<img width="677" height="101" alt="image" src="https://github.com/user-attachments/assets/1c55bf38-42ea-4c41-aa2a-a29e4c7efcbe" />
+
 
 
 
