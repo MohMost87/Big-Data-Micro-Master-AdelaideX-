@@ -31,6 +31,12 @@ mytribble<br>
 mpg<b>$</b>model  <br>
 <img width="675" height="339" alt="image" src="https://github.com/user-attachments/assets/aad3dab7-da26-4a66-a5cb-464bda44897d" />
 
+## To Look at unique values 
+unique(mpg$model)<br>
+<img width="661" height="230" alt="image" src="https://github.com/user-attachments/assets/6cdf71ae-702b-412a-9866-5c5813ef817e" />
+
+
+
 
 
 
