@@ -9,4 +9,6 @@ ggplot(mpg) +
   geom_point(mapping = aes(x = displ, y = cty))
 
 
+## <span style="color:#2A6F97">2. Adding Color Aesthetics</span>
 
+You can reveal deeper insights by mapping a third categorical variable to a visual property like color. Here, we color the points by the drivetrain type (drv): front-wheel drive (f), rear-wheel drive (r), or 4-wheel drive (4).
