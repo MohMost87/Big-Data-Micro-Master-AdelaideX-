@@ -49,6 +49,10 @@ mpg[194:198,1:4]<br>
 <img width="344" height="151" alt="image" src="https://github.com/user-attachments/assets/e534b37b-8be3-42a4-960c-c89cd36351a0" />
 
 
+=========================================================================================================================================
+## <color="red"> Subjects and Variables
+
+
 
 
 
