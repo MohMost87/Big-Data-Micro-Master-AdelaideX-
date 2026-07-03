@@ -49,4 +49,11 @@ ggplot is built upon layers, making it an incredibly powerful tool for creating 
   <img width="1076" height="569" alt="image" src="https://github.com/user-attachments/assets/32d86803-1c48-4f4d-9574-5a07775d2281" />
 
 
+## Visualising common words and similarities between texts
+Part 1 - Download the carroll_books.csv file and put it in your RStudio working directory (which you can find using the getwd() function). Load the two works for that author into R using as_tibble(read.csv(file = "carroll_books.csv", as.is = c("text"), encoding = "UTF-8"))).
+
+Part 2 - Count the frequency of each word used, making sure to remove stop words. Hint: You may also like to produce some ggplots to help with your investigation.
+
+Part 3 - Answer Questions 1-5.
+
 
