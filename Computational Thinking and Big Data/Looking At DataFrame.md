@@ -68,6 +68,10 @@ geom_bar() +<br>
 theme(text = element_text(size = 30), axis.text.x = element_text(angle = 90))<br>
 
 <img width="1099" height="616" alt="image" src="https://github.com/user-attachments/assets/957566cb-1583-4a6d-b842-70414d96d8b9" />
+Make a canvas which will visualise data from the mpg dataframe ggplot(mpg)<br>
+Map the single aesthetic manufacturer to the x-axis of this canvas aes(manufacturer), and,<br>
+Add a barchart layer showing this to the plot + geom_bar().<br>
+=====================================================================================================================
 
 
 
