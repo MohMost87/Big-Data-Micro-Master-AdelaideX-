@@ -26,3 +26,6 @@ mytribble <- tribble(?<br>
 mytribble<br>
 <img width="204" height="133" alt="image" src="https://github.com/user-attachments/assets/53d730da-bf91-493d-a25d-5a2baf5f13ce" />
 
+### Getting variables from a dataframe
+
+
