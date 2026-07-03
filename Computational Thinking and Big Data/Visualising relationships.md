@@ -32,4 +32,14 @@ ggplot is built upon layers, making it an incredibly powerful tool for creating 
 
   <img width="1074" height="567" alt="image" src="https://github.com/user-attachments/assets/609b6be2-3db0-45e0-b5f9-31215c689eb9" />
 
+  ## Adding separate trendlines for each type of drive in our coloured scatterplot is similar:
+
+   ggplot(mpg, mapping = aes(x = displ, y = cty, colour = drv)) + <br>
+  geom_point() + <br>
+  geom_smooth() <br>
+
+<img width="1073" height="574" alt="image" src="https://github.com/user-attachments/assets/31bb3e4f-0224-45b0-a40e-b157b6e0d87b" />
+
+  
+
 
