@@ -12,8 +12,8 @@ mytibble <- tibble( <br>
   x = 1:4, <b>
   y = x^2, <br>
   z = y + 0.1<br>
-)
-output
+)<br>
+output<br>
 <img width="292" height="256" alt="image" src="https://github.com/user-attachments/assets/73f445e4-b7ef-44d8-a475-5153b88d01b2" />
 
 
