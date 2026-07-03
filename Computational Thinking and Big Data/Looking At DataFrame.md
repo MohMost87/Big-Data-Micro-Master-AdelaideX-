@@ -38,6 +38,7 @@ unique(mpg$model)<br>
 38 different types of cars in the dataset.<br>
 ## if we need particular entry in dataset
 mpg[194,]<br>
+
 <img width="677" height="101" alt="image" src="https://github.com/user-attachments/assets/1c55bf38-42ea-4c41-aa2a-a29e4c7efcbe" />
 
 
