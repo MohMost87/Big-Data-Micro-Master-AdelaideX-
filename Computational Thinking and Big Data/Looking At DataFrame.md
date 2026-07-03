@@ -57,6 +57,22 @@ table(mpg$manufacturer)
 
 <img width="674" height="131" alt="image" src="https://github.com/user-attachments/assets/2268feab-07f2-414f-b2e1-c4ad28ffc70c" />
 
+## proportion of each type of car
+prop.table(table(mpg$manufacturer))
+
+<img width="654" height="133" alt="image" src="https://github.com/user-attachments/assets/b149a254-44b2-4a0c-8dbd-93d87f25019d" />
+========================================================================================================================================
+ggplot package  visulaization
+ggplot(mpg,aes(manufacturer)) +<br>
+geom_bar() +<br>
+theme(text = element_text(size = 30), axis.text.x = element_text(angle = 90))<br>
+
+<img width="1099" height="616" alt="image" src="https://github.com/user-attachments/assets/957566cb-1583-4a6d-b842-70414d96d8b9" />
+
+
+
+
+
 
 
 
