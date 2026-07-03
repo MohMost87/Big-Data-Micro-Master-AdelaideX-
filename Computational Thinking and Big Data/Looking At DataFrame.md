@@ -61,7 +61,7 @@ table(mpg$manufacturer)
 prop.table(table(mpg$manufacturer))
 
 <img width="654" height="133" alt="image" src="https://github.com/user-attachments/assets/b149a254-44b2-4a0c-8dbd-93d87f25019d" /><br>
-========================================================================================================================================
+========================================================================================================================================<br>
 ggplot package  visulaization
 ggplot(mpg,aes(manufacturer)) +<br>
 geom_bar() +<br>
