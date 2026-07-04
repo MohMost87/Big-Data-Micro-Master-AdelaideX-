@@ -13,8 +13,19 @@ filter(flights, month == 1, day == 1) filter on month and day
 
 <img width="701" height="309" alt="image" src="https://github.com/user-attachments/assets/510c1ab6-95aa-4518-82f6-0f5735fbdfb4" />
 
-## <span style="color:#2A6F97"> Aside - magrittr  </span>
+## <span style="color:#2A6F97"> Aside - magrittr   use the magrittr or "pipe" symbol %>% </span>
 
 flights %>% filter(month == 1, day == 1)
 
 <img width="709" height="310" alt="image" src="https://github.com/user-attachments/assets/78cab468-cb0d-46b0-8dc6-5788d2b459eb" />
+
+-------
+## <span style="color:#2A6F97"> Select to select certain columns </span>
+
+ncyflights13 dataset (or many “Big” datasets) is that it is too wide to fit onto the screen. In all the examples of filtering above we couldn’t even see all of the variables – there were always 12 columns which didn’t fit on the screen. It’d be nice if we could make our dataframe a bit narrower, so that we can fit the information we’re interested in (and nothing else) onto the screen. This is what select does – it’s essentially a filter, but for columns rather than rows.
+
+flights %>% filter(carrier == "AA",month == 1, day == 1) %>% <b>select(flight,dep_time,arr_time)</b>
+
+
+
+
