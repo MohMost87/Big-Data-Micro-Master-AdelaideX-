@@ -24,7 +24,23 @@ flights %>% filter(month == 1, day == 1)
 
 ncyflights13 dataset (or many “Big” datasets) is that it is too wide to fit onto the screen. In all the examples of filtering above we couldn’t even see all of the variables – there were always 12 columns which didn’t fit on the screen. It’d be nice if we could make our dataframe a bit narrower, so that we can fit the information we’re interested in (and nothing else) onto the screen. This is what select does – it’s essentially a filter, but for columns rather than rows.
 
+
+
+
 flights %>% filter(carrier == "AA",month == 1, day == 1) %>% <b>select(flight,dep_time,arr_time)</b>
+
+<img width="732" height="285" alt="image" src="https://github.com/user-attachments/assets/6223c998-f6c8-4e24-870b-61fa322c8311" />
+
+select(flights, year:day)
+
+<img width="395" height="263" alt="image" src="https://github.com/user-attachments/assets/806f8762-c8fc-481c-af03-1b6ee1be816f" />
+
+
+## <span style="color:#2A6F97"> Making New Variables using mutate </span>
+
+
+
+
 
 
 
