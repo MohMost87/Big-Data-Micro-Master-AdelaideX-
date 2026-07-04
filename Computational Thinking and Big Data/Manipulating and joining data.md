@@ -67,6 +67,7 @@ summarise(by_month, delay = mean(dep_delay, na.rm = TRUE))
 
 
 
+<img width="727" height="523" alt="image" src="https://github.com/user-attachments/assets/e34fd0d2-0557-4010-8a8f-a00c28271841" />
 
 
 
