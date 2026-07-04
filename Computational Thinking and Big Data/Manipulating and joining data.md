@@ -9,3 +9,12 @@ filter(flights, month == 1)   filter on month equal 1 filter (subject,condition)
 <img width="699" height="311" alt="image" src="https://github.com/user-attachments/assets/0025e75b-5656-451e-92b4-c360b39daf42" />
 
 
+filter(flights, month == 1, day == 1) filter on month and day
+
+<img width="701" height="309" alt="image" src="https://github.com/user-attachments/assets/510c1ab6-95aa-4518-82f6-0f5735fbdfb4" />
+
+## <span style="color:#2A6F97"> Aside - magrittr  </span>
+
+flights %>% filter(month == 1, day == 1)
+
+<img width="709" height="310" alt="image" src="https://github.com/user-attachments/assets/78cab468-cb0d-46b0-8dc6-5788d2b459eb" />
