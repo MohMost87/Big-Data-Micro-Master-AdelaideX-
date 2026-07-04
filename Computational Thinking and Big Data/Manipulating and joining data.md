@@ -48,6 +48,28 @@ then call flights will lead to show the new variable
 
 <img width="706" height="386" alt="image" src="https://github.com/user-attachments/assets/94a7611e-54a6-4c17-a45c-e36973a7f6e5" />
 
+## <span style="color:#2A6F97"> Grouping subjects based on criteria </span>
+, I have a hypothesis about flight delays in New York City: I reckon they're worse in winter. Snowstorms, ice, wind... I suspect that all of these will make delays in the winter months of December, January, February, worse than in the summer months. To investigate this, you'll need to group flights by month, which you can do like this:
+by_month <- group_by(flights,month)<br>
+by_month
+
+<img width="710" height="319" alt="image" src="https://github.com/user-attachments/assets/e4fc31b2-1395-420d-9415-9825c4259352" />
+
+## <span style="color:#2A6F97"> Producing summary statistics for groups of subjects </span>
+
+summarise(by_month, delay = mean(dep_delay, na.rm = TRUE))
+
+<img width="582" height="377" alt="image" src="https://github.com/user-attachments/assets/aedcaa42-ba97-403f-81c0-1e71f8e1a8da" />
+
+## <span style="color:#2A6F97"> Putting together multiple dataframes with common subjects </span>
+
+<img width="718" height="55" alt="image" src="https://github.com/user-attachments/assets/9a503466-e640-480f-93d3-179aae89cef6" />
+
+
+
+
+
+
 
 
  
