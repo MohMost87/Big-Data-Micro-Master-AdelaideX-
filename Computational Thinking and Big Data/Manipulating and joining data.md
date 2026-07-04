@@ -37,6 +37,20 @@ select(flights, year:day)
 
 
 ## <span style="color:#2A6F97"> Making New Variables using mutate </span>
+ add new columns? In the dataset flights, we have the departure delay dep_delay, which is the difference between the scheduled departure time (sched_dep_time) and the departure time (dep_time).
+use mustate to add new variable to dataset
+flights %>% mutate(delay = dep_time - sched_dep_time)
+ add new column called delay to flights dataset
+ 
+<img width="703" height="372" alt="image" src="https://github.com/user-attachments/assets/4291b986-52cb-4243-b97c-5bd6728d7cdc" />
+
+then call flights will lead to show the new variable
+
+<img width="706" height="386" alt="image" src="https://github.com/user-attachments/assets/94a7611e-54a6-4c17-a45c-e36973a7f6e5" />
+
+
+
+ 
 
 
 
