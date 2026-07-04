@@ -30,6 +30,7 @@ For example, I have a box of dice at home that are of various sizes. I measured 
 <img width="798" height="529" alt="image" src="https://github.com/user-attachments/assets/03a3fbde-a750-40ae-8f5e-623a1aeb5d79" />
 <img width="651" height="450" alt="image" src="https://github.com/user-attachments/assets/2c33ca7d-1747-465d-af64-8b12aa772ded" />
 
+<img width="614" height="500" alt="image" src="https://github.com/user-attachments/assets/e75be85a-1290-428b-96af-fca4ab1b81b0" />
 
 
 
