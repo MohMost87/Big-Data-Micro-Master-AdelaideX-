@@ -32,6 +32,11 @@ For example, I have a box of dice at home that are of various sizes. I measured 
 
 <img width="614" height="500" alt="image" src="https://github.com/user-attachments/assets/e75be85a-1290-428b-96af-fca4ab1b81b0" />
 
+## <span style="color:#2A6F97"> Basic idea of PCA </span>
+ What do you mean by dimension reduction? and <br>
+ Why do I have to learn about PCA?
+
+ 
 
 
 
