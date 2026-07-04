@@ -21,6 +21,21 @@ So how do we transform this to a more symmetric distribution? When confronted wi
 <img width="538" height="510" alt="image" src="https://github.com/user-attachments/assets/9db5814f-167a-46aa-8304-d02e8785fed1" />
 
 
+## <span style="color:#2A6F97"> Automatic transformations </span>
+This business of transforming data seems like hard work, because we need to know a little bit about our data - such as whether we expect it to be skewed or not - before we can decide on an appropriate transformation. And it becomes more complicated if we want to visualise the relationship between variables. It'd be nice if we had an automatic method we could throw at our data to find transformations automatically.<br>
+
+For example, I have a box of dice at home that are of various sizes. I measured the side length of each die (in cm), as well as the volume (in mL) by putting the die in a jug of water and measuring the displacement (the things I do for this course!).
+<img width="346" height="396" alt="image" src="https://github.com/user-attachments/assets/c47afad2-640f-42a0-838c-9c97326f6eee" />
+<img width="532" height="446" alt="image" src="https://github.com/user-attachments/assets/6788ae95-adc7-4a73-a83a-f1c82cd684b4" />
+<img width="798" height="529" alt="image" src="https://github.com/user-attachments/assets/03a3fbde-a750-40ae-8f5e-623a1aeb5d79" />
+<img width="651" height="450" alt="image" src="https://github.com/user-attachments/assets/2c33ca7d-1747-465d-af64-8b12aa772ded" />
+
+
+
+
+
+
+
 
 
 
