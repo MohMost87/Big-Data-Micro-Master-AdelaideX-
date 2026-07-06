@@ -115,6 +115,7 @@ pca_plot <- ggplot(BreastCancer, aes(x = PC1, y = PC2)) +<br>
 # Display the plot<br>
 print(pca_plot)<br>
 
+<img width="1058" height="527" alt="image" src="https://github.com/user-attachments/assets/8763603d-8da4-461a-b896-d7a96e5a7f7e" />
 
 
 
