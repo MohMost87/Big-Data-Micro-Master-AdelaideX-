@@ -51,14 +51,14 @@ print(predictors)
 Now for the payoff. Instead of juggling 9 separate plots, we plot PC1 against PC2 and color-code the points by their actual medical diagnosis (Class).
 
 R
-ggplot(BreastCancer, aes(x = PC1, y = PC2)) +
-  geom_point(aes(col = Class), alpha = 0.7, size = 2) +
-  labs(
-    title = "PCA of Breast Cancer Biopsy Samples",
-    x = "Principal Component 1 (PC1)",
-    y = "Principal Component 2 (PC2)"
-  ) +
-  theme_minimal()
+ggplot(BreastCancer, aes(x = PC1, y = PC2)) +<br>
+  geom_point(aes(col = Class), alpha = 0.7, size = 2) +<br>
+  labs(<br>
+    title = "PCA of Breast Cancer Biopsy Samples",<br>
+    x = "Principal Component 1 (PC1)",<br>
+    y = "Principal Component 2 (PC2)"<br>
+  ) +<br>
+  theme_minimal()<br>
 
 
 
