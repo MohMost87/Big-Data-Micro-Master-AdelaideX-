@@ -140,6 +140,30 @@ print(pca_plot)<br>
 
 
 
+## Term Frequency - Inverse Document Frequency (TF-IDF)
+<img width="607" height="301" alt="image" src="https://github.com/user-attachments/assets/6ff5f70c-c3bd-4567-8d3a-aed903cec1f7" />
+<img width="608" height="496" alt="image" src="https://github.com/user-attachments/assets/1556ed6d-e4a7-4a4d-86c1-50a23a999962" />
+<img width="624" height="484" alt="image" src="https://github.com/user-attachments/assets/11a24466-02c1-4a19-9e80-a5bbd271032e" />
+
+
+
+
+
+## Term Frequency - Inverse Document Frequency (TF-IDF): Mathematics and R code
+
+<img width="663" height="469" alt="image" src="https://github.com/user-attachments/assets/63aa02ba-e137-452d-ac80-2c6a6fd8c545" />
+<img width="667" height="540" alt="image" src="https://github.com/user-attachments/assets/9245f596-0f75-44b6-8293-151e75ade0e3" />
+<img width="618" height="336" alt="image" src="https://github.com/user-attachments/assets/e977dd75-c60e-40c8-abdd-d14dd95ae445" />
+
+
+
+
+
+
+
+
+
+
 
 
 
