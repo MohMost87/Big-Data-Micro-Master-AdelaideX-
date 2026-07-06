@@ -22,5 +22,12 @@ PC1 (The 1st Dimension) is a custom blend of your original variables that captur
 
 PC2 (The 2nd Dimension) captures the next biggest pattern, and so on.
 
+## What Exactly is PCA?
+PCA transforms your original, correlated variables into a new set of uncorrelated variables called Principal Components (PCs):
+
+The First Principal Component (PC1): The specific linear combination of your predictors that captures and explains the absolute maximum variation in your data.
+
+The Second Principal Component (PC2): The combination that captures the next highest amount of variance, completely independent of (orthogonal to) PC1.
+
 The Ultimate Goal
 By using dimension reduction, you can take those 9 complex dimensions and squeeze them down into just 2 dimensions (PC1 and PC2).
