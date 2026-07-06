@@ -11,6 +11,15 @@
 <img width="648" height="269" alt="image" src="https://github.com/user-attachments/assets/43d1d776-c3a3-47c1-b444-dcaa001af6d7" />
 
 
+# What is confidence?
+<img width="670" height="450" alt="image" src="https://github.com/user-attachments/assets/a50a6e86-8725-4e98-8d25-d1129f93f370" />
+<img width="681" height="333" alt="image" src="https://github.com/user-attachments/assets/7b1d796f-e2d2-425e-8bde-6624ae889ff3" />
+<img width="635" height="431" alt="image" src="https://github.com/user-attachments/assets/5ce2bebe-76b5-46ef-b257-dbafcab39203" />
+
+
+
+
+
 
 
 
