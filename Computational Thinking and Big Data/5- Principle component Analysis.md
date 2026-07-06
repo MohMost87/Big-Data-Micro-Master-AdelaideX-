@@ -63,7 +63,57 @@ ggplot(BreastCancer, aes(x = PC1, y = PC2)) +<br>
 <img width="1058" height="527" alt="image" src="https://github.com/user-attachments/assets/f56f86fd-f678-4767-850d-9aaabddffa1d" />
 
 
+# ==============================================================================
+# Principal Component Analysis (PCA) Walkthrough
+# Dataset: BreastCancer (mlbench)
+# ==============================================================================
 
+# 1. Install and load necessary packages
+if(!require(mlbench)) install.packages("mlbench")
+if(!require(tidyverse)) install.packages("tidyverse")
+
+library(mlbench)
+library(tidyverse)
+
+# 2. Load the dataset and convert to a modern data frame (tibble)
+data(BreastCancer)
+BreastCancer <- as_tibble(BreastCancer)
+
+# 3. Clean the data: Remove missing values (PCA cannot handle NAs)
+BreastCancer <- na.omit(BreastCancer)
+
+# 4. Extract and transform the 9 clinical predictors to numeric form
+predictors <- BreastCancer %>% 
+  select(Cl.thickness:Mitoses) %>% 
+  mutate_all(~as.numeric(.))
+
+# View the processed numeric predictors
+print("Processed numeric predictors:")
+print(predictors)
+
+# 5. Run the Principal Component Analysis
+PCA <- princomp(predictors, scores = TRUE)
+
+# 6. Extract the scores for the first two components and add them back to the data
+BreastCancer$PC1 <- PCA$scores[, 1]
+BreastCancer$PC2 <- PCA$scores[, 2]
+
+# 7. Generate a scatter plot using the principal components
+pca_plot <- ggplot(BreastCancer, aes(x = PC1, y = PC2)) +
+  geom_point(aes(col = Class), alpha = 0.6, size = 2.5) +
+  scale_color_manual(values = c("benign" = "#2ca02c", "malignant" = "#d62728")) +
+  labs(
+    title = "PCA Dimensionality Reduction",
+    subtitle = "Breast Cancer Dataset (PC1 vs PC2)",
+    x = "Principal Component 1 (Explains maximum variance)",
+    y = "Principal Component 2",
+    color = "Diagnosis Class"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+# Display the plot
+print(pca_plot)
 
 
 
