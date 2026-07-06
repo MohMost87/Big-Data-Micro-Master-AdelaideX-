@@ -29,5 +29,33 @@ The First Principal Component (PC1): The specific linear combination of your pre
 
 The Second Principal Component (PC2): The combination that captures the next highest amount of variance, completely independent of (orthogonal to) PC1.
 
+
+
+# Load and format data
+data(BreastCancer)
+BreastCancer <- as_tibble(BreastCancer) %>% na.omit()
+
+# Isolate numeric predictors
+predictors <- BreastCancer %>% 
+  select(Cl.thickness:Mitoses) %>% 
+  mutate_all(~as.numeric(.))
+
+print(predictors)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 The Ultimate Goal
 By using dimension reduction, you can take those 9 complex dimensions and squeeze them down into just 2 dimensions (PC1 and PC2).
