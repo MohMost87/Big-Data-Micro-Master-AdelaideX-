@@ -212,7 +212,7 @@ By dynamically tightening your algorithmic criteria to account for $N$, **you en
 If you do not adjust your anomaly detection filters to scale with $N$, big data volume will break your system with statistically certain false alarms. Implementing a Bonferroni-style correction directly into your data mining criteria ensures that rare events remain genuinely significant, no matter how vast your dataset grows.
 
 > *Further Reading Reminder: For a deep-dive refresher on manipulating probability rules and simplifying exponential expressions used here, review Section 8 of the "Computational Thinking and Big Data" module guidelines.*
-
+-----
 # Mathematical Solution: Required System Reliability
 
 Consider a facial recognition system that is used in an airport. This system has cameras that collect images of people's faces and analyzes them against a database of known criminals. There is a 0.01% chance a person who is not a criminal is flagged as a criminal.
