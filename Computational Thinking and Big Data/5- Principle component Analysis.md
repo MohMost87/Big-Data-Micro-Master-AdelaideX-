@@ -60,6 +60,7 @@ ggplot(BreastCancer, aes(x = PC1, y = PC2)) +<br>
   ) +<br>
   theme_minimal()<br>
 
+<img width="1058" height="527" alt="image" src="https://github.com/user-attachments/assets/f56f86fd-f678-4767-850d-9aaabddffa1d" />
 
 
 
