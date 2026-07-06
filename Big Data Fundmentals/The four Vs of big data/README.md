@@ -213,3 +213,46 @@ If you do not adjust your anomaly detection filters to scale with $N$, big data 
 
 > *Further Reading Reminder: For a deep-dive refresher on manipulating probability rules and simplifying exponential expressions used here, review Section 8 of the "Computational Thinking and Big Data" module guidelines.*
 
+# Mathematical Solution: Required System Reliability
+
+To find the required reliability of the facial recognition system, we calculate the maximum allowable false positive rate that results in no more than 20 false alarms for a population of 10 million people, and then determine its inverse percentage.
+
+---
+
+### Step 1: Identify the Given Variables
+* **Total Population ($N$):** $10,000,000$ (10 million people)
+* **Maximum Allowable False Positives ($FP$):** $20$
+
+---
+
+### Step 2: Calculate the Maximum Allowable False Positive Rate ($FPR$)
+The number of false positives is determined by multiplying the total population of innocent individuals by the false positive rate. 
+
+$$\text{False Positives} = N \times \text{False Positive Rate}$$
+
+Rearranging the formula to solve for the **False Positive Rate ($FPR$)**:
+
+$$\text{False Positive Rate} = \frac{\text{Maximum Allowable False Positives}}{\text{Total Population}}$$
+
+$$\text{False Positive Rate} = \frac{20}{10,000,000}$$
+
+$$\text{False Positive Rate} = 0.000002$$
+
+Converting this decimal value to a percentage:
+$$\text{False Positive Rate (\%)} = 0.000002 \times 100 = 0.0002\%$$
+
+---
+
+### Step 3: Find the Inverse Percentage (System Reliability)
+The reliability (the system's accuracy in correctly identifying non-criminals) is the exact inverse of the false positive rate. 
+
+$$\text{Reliability (\%)} = 100\% - \text{False Positive Rate (\%)} $$
+
+$$\text{Reliability (\%)} = 100\% - 0.0002\%$$
+
+$$\text{Reliability (\%)} = 99.9998\%$$
+
+---
+
+### Final Answer
+The facial recognition system must achieve a reliability rate of **$99.9998\%$** to guarantee that, on average, it does not generate more than 20 false positives within a sample of 10 million people processed.
