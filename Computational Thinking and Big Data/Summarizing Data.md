@@ -16,6 +16,17 @@
 <img width="681" height="333" alt="image" src="https://github.com/user-attachments/assets/7b1d796f-e2d2-425e-8bde-6624ae889ff3" />
 <img width="635" height="431" alt="image" src="https://github.com/user-attachments/assets/5ce2bebe-76b5-46ef-b257-dbafcab39203" />
 
+## Calculating Confidence Intervals in R
+
+<img width="661" height="409" alt="image" src="https://github.com/user-attachments/assets/cbc7a847-5ec2-4a9e-98f4-b246ae896624" />
+<img width="707" height="463" alt="image" src="https://github.com/user-attachments/assets/d937fea5-b1fe-4310-965d-7f63bf05e7bf" />
+<img width="683" height="328" alt="image" src="https://github.com/user-attachments/assets/dd11047f-e14c-4391-af5c-5a4f49c16c90" />
+<img width="657" height="303" alt="image" src="https://github.com/user-attachments/assets/9af161b5-b5e5-46eb-bca8-da0246fd2c33" />
+
+
+
+
+
 
 
 
