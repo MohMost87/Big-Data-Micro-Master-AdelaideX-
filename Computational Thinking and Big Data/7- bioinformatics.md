@@ -20,7 +20,23 @@ For every possible k-mer combination of length k (e.g., AAAAA, AAAAC, AAAAG...):
     <img width="661" height="309" alt="image" src="https://github.com/user-attachments/assets/66d1bc93-cbff-436f-95ce-39cfb0bf86c0" />
     <img width="728" height="467" alt="image" src="https://github.com/user-attachments/assets/6a449f2d-193b-405d-99d7-3ed00c1894c0" />
     <img width="738" height="396" alt="image" src="https://github.com/user-attachments/assets/012db595-d712-47aa-8bdf-bd468df9e756" />
-    <img width="604" height="411" alt="image" src="https://github.com/user-attachments/assets/a3b33039-b1cd-4451-b816-66404cf4b332" />
+    <img width="604" height="411" alt="image" src="https://github.com/user-attachments/assets/a3b33039-b1cd-4451-b816-66404cf4b332" /><br>
+
+
+    ## Implementing a Perfect Hash in R
+    <img width="621" height="190" alt="image" src="https://github.com/user-attachments/assets/119fdbdd-9869-427f-b40a-3599e7d8fbcb" />
+    <img width="691" height="352" alt="image" src="https://github.com/user-attachments/assets/e22f970c-fd64-4f13-a076-bd66632c8218" />
+    <img width="655" height="482" alt="image" src="https://github.com/user-attachments/assets/4065f63e-dd53-4bb9-9640-92be79a071c9" />
+    <img width="658" height="551" alt="image" src="https://github.com/user-attachments/assets/20fd316f-5952-493a-9bdd-bfc7a26925a0" />
+    <img width="707" height="321" alt="image" src="https://github.com/user-attachments/assets/efcd14e6-c696-40c1-9900-fa8f5467c0cf" />
+    <img width="626" height="403" alt="image" src="https://github.com/user-attachments/assets/aca8a7fa-c3d0-4576-bb86-dc2d88f8f6a8" />
+    
+
+
+
+
+
+
 
 
 
