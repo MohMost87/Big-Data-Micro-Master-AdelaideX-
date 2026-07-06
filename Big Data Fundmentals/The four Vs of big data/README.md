@@ -215,6 +215,12 @@ If you do not adjust your anomaly detection filters to scale with $N$, big data 
 
 # Mathematical Solution: Required System Reliability
 
+Consider a facial recognition system that is used in an airport. This system has cameras that collect images of people's faces and analyzes them against a database of known criminals. There is a 0.01% chance a person who is not a criminal is flagged as a criminal.
+
+Hint: You want to calculate the False Positive rate expected, and then find the inverse percentage.
+
+How reliable does the facial recognition system have to be such that on average it does not observe more than 20 false positives within a sample of 10 million people processed? Calculate the reliability as a percentage value.
+
 To find the required reliability of the facial recognition system, we calculate the maximum allowable false positive rate that results in no more than 20 false alarms for a population of 10 million people, and then determine its inverse percentage.
 
 ---
