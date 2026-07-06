@@ -1,5 +1,8 @@
 # Understanding the 4 Vs of Big Data: Challenges & Real-World Examples
 
+<img width="521" height="481" alt="image" src="https://github.com/user-attachments/assets/973894f4-8bbf-407c-80a7-a95cfa5f1c76" />
+
+
 Big data poses distinct structural and architectural challenges when designing algorithms or software systems capable of handling it. While it is incredibly exciting and possesses the potential to fundamentally transform healthcare policy decisions and modern business operations, we must address its core challenges first.
 
 To capture and systematically categorize these hurdles, we analyze big data through the lens of **The Four Vs**: **Volume**, **Velocity**, **Veracity**, and **Variety**.
