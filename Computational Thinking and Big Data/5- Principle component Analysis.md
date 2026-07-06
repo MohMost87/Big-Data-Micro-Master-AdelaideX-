@@ -127,6 +127,16 @@ print(pca_plot)<br>
 
 
 
+## The Statistics Behind PCA:  the Variance-Covariance Matrix
+<img width="620" height="533" alt="image" src="https://github.com/user-attachments/assets/4a34ec93-523e-4b5e-99d5-59077c74cf25" />
+<img width="665" height="507" alt="image" src="https://github.com/user-attachments/assets/23aa9923-9096-488c-a779-fd2f9fd8085e" />
+<img width="676" height="540" alt="image" src="https://github.com/user-attachments/assets/e507350c-a998-4183-8346-768a62f2068f" />
+<img width="665" height="441" alt="image" src="https://github.com/user-attachments/assets/0e85a607-b6d4-4dfa-8386-0120818ba3e8" />
+<img width="648" height="176" alt="image" src="https://github.com/user-attachments/assets/fd6c89dd-a0d8-4993-a50f-93437c6cc88e" />
+
+
+
+
 
 
 
