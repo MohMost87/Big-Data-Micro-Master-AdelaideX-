@@ -72,48 +72,48 @@ ggplot(BreastCancer, aes(x = PC1, y = PC2)) +<br>
 if(!require(mlbench)) install.packages("mlbench")
 if(!require(tidyverse)) install.packages("tidyverse")
 
-library(mlbench)
-library(tidyverse)
+library(mlbench)<br>
+library(tidyverse)<br>
 
 # 2. Load the dataset and convert to a modern data frame (tibble)
-data(BreastCancer)
-BreastCancer <- as_tibble(BreastCancer)
+data(BreastCancer)<br>
+BreastCancer <- as_tibble(BreastCancer)<br>
 
 # 3. Clean the data: Remove missing values (PCA cannot handle NAs)
-BreastCancer <- na.omit(BreastCancer)
+BreastCancer <- na.omit(BreastCancer)<br>
 
 # 4. Extract and transform the 9 clinical predictors to numeric form
-predictors <- BreastCancer %>% 
-  select(Cl.thickness:Mitoses) %>% 
-  mutate_all(~as.numeric(.))
+predictors <- BreastCancer %>% <br>
+  select(Cl.thickness:Mitoses) %>% <br>
+  mutate_all(~as.numeric(.))<br>
 
 # View the processed numeric predictors
-print("Processed numeric predictors:")
-print(predictors)
+print("Processed numeric predictors:")<br>
+print(predictors)<br>
 
 # 5. Run the Principal Component Analysis
-PCA <- princomp(predictors, scores = TRUE)
+PCA <- princomp(predictors, scores = TRUE)<br>
 
 # 6. Extract the scores for the first two components and add them back to the data
-BreastCancer$PC1 <- PCA$scores[, 1]
-BreastCancer$PC2 <- PCA$scores[, 2]
+BreastCancer$PC1 <- PCA$scores[, 1]<br>
+BreastCancer$PC2 <- PCA$scores[, 2]<br>
 
 # 7. Generate a scatter plot using the principal components
-pca_plot <- ggplot(BreastCancer, aes(x = PC1, y = PC2)) +
-  geom_point(aes(col = Class), alpha = 0.6, size = 2.5) +
-  scale_color_manual(values = c("benign" = "#2ca02c", "malignant" = "#d62728")) +
-  labs(
-    title = "PCA Dimensionality Reduction",
-    subtitle = "Breast Cancer Dataset (PC1 vs PC2)",
-    x = "Principal Component 1 (Explains maximum variance)",
-    y = "Principal Component 2",
-    color = "Diagnosis Class"
-  ) +
-  theme_minimal() +
-  theme(legend.position = "bottom")
+pca_plot <- ggplot(BreastCancer, aes(x = PC1, y = PC2)) +<br>
+  geom_point(aes(col = Class), alpha = 0.6, size = 2.5) +<br>
+  scale_color_manual(values = c("benign" = "#2ca02c", "malignant" = "#d62728")) +<br>
+  labs(<br>
+    title = "PCA Dimensionality Reduction",<br>
+    subtitle = "Breast Cancer Dataset (PC1 vs PC2)",<br>
+    x = "Principal Component 1 (Explains maximum variance)",<br>
+    y = "Principal Component 2",<br>
+    color = "Diagnosis Class"<br>
+  ) +<br>
+  theme_minimal() +<br>
+  theme(legend.position = "bottom")<br>
 
-# Display the plot
-print(pca_plot)
+# Display the plot<br>
+print(pca_plot)<br>
 
 
 
