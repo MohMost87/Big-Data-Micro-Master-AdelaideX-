@@ -1,4 +1,4 @@
-
+<img width="626" height="508" alt="image" src="https://github.com/user-attachments/assets/d3803ac5-5180-4caf-a77a-e38a280ff337" />
 ## What meaning by priciple Component  analysis
 What  by dimension reduction? 
 # 1. What is a "Dimension"?
@@ -116,6 +116,16 @@ pca_plot <- ggplot(BreastCancer, aes(x = PC1, y = PC2)) +<br>
 print(pca_plot)<br>
 
 <img width="1058" height="527" alt="image" src="https://github.com/user-attachments/assets/8763603d-8da4-461a-b896-d7a96e5a7f7e" />
+
+
+
+
+<img width="641" height="259" alt="image" src="https://github.com/user-attachments/assets/8f191a09-8c83-4250-8db4-46264b92537f" />
+<img width="626" height="508" alt="image" src="https://github.com/user-attachments/assets/26ab71f3-392f-403f-a37f-38af356f32e7" />
+<img width="653" height="548" alt="image" src="https://github.com/user-attachments/assets/a29e276e-c921-4d96-a37d-be1f1cd32b0d" />
+<img width="623" height="506" alt="image" src="https://github.com/user-attachments/assets/47c79cd0-6e76-4690-83ec-ad91d52990ac" />
+
+
 
 
 
